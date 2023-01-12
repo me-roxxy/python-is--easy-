@@ -1,0 +1,28 @@
+####CONTROL FLOW
+###condition based control flow
+##if block
+#n=int(input("enter a num"))
+#if n%2==0:
+    #print("num is even")
+    
+##else block
+#else:
+    #print("num is odd")
+
+ #//to find out whether a num is in range of 1-100
+#n=int(input("enter a num"))
+#if n>=1 and n<=100: 
+    #print(n,"is in range of 1-100")
+#else:
+    #print("out of range")
+
+##if-elif laddder block
+#n=int(input("enter a num"))
+#if n>=1 and n<=100:
+    #print(n,"is in range of 1-100")
+#elif n>100 and n<=200:
+   #print(n,"is in range of 100-200")
+#elif n>200 and n<=300:
+    #print(n,"is in range of 200-300")
+#else:
+    #print("invalid input") 

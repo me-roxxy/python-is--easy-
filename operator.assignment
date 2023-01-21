@@ -1,0 +1,36 @@
+1. to covert a input distance in meter to feet 
+n=int(input("entr dis"))
+i=3.281/n
+print("dis:",round(i,2))
+
+2. to covert a input tempreture in celcius to farenheit
+n=float(input("enter temp"))
+temp=(n*9/5)+32
+print(temp)
+
+3. to calulate the total maks and percentage(out of 300) of student input test marks in 
+ English,math and Science
+a=int(input("eng"))
+b=int(input("math"))
+c=int(input("sci"))
+total=a+b+c
+percentage=total/3
+print("sum:",total)
+print("per:",percentage)
+
+4.to find an input number is even .result is in True and False
+n=int(input("enter num"))
+if n%2==0:
+    print("true")
+else:
+    print("false")
+
+5.a Python function to calculate the factorial of a number (a non-negative integer). The function accepts the number as an argument
+to calculate the area and perimeter of circle with user input radius.
+r=int(input("enter radius"))
+pi=3.14
+area=pi*r*r
+peri=2*pi*r
+print("area:",area)
+print("perimeter:",peri)
+

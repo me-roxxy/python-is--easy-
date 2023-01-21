@@ -1,0 +1,212 @@
+1. a Python program to read the age of a candidate and determine whether it is eligible for casting his/her own vote. 
+Test Data : 21
+Expected Output :
+Congratulation! You are eligible for casting your vote.
+age=int(input("enter your age"))
+if age>=18:
+    print("Congratulation! You are eligible for casting your vote")
+else:
+    print("you are not eligible")
+
+
+
+2. a Python program to read the value of an integer m and display the value of n is 1 when m is larger than 0, 0 when m is 0 and -1 when m is less than 0. 
+Test Data : -5
+Expected Output :
+The value of n = -1
+m=int(input("enter a num"))
+if m>0:
+    print("n is 1")
+elif m==0:
+    print("n is 0")
+else:
+    print("n is -1")
+
+
+3. a Python program to accept the height of a person in centimeter and categorize the person according to their height. 
+Test Data : 135
+Expected Output :
+The person is Dwarf.
+<140   Dwarf
+<140  >170 Average
+>170    Tall
+h=int(input("enter height in cm"))
+if h<140:
+    print("dwarf")
+elif h>140 and h<170:
+    print("average")
+elif h>170:
+    print("tall")
+
+
+4. program to find the largest of three numbers. 
+Test Data : 12 25 52
+Expected Output :
+1st Number = 12,        2nd Number = 25,        3rd Number = 52
+The 3rd Number is the greatest among three
+x=int(input("enter 1 num"))
+y=int(input("enter 2 num"))
+z=int(input("enter 3 num"))
+if x>y and x>z:
+    print("x is largest")
+elif y>x and y>z:
+     print("y is largest")
+else:
+     print("z is largest")
+
+
+
+5. program to accept a coordinate point in a XY coordinate system and determine in which quadrant the coordinate point lies. 
+Test Data : 7 9
+Expected Output :
+The coordinate point (7,9) lies in the First quadrant.
+x=int(input("enter x"))
+y=int(input("enter y"))
+if x>=0 and y>=0:
+    print("in 1st qua")
+elif x<0 and y>=0:
+    print("2nd qua")
+elif x<0 and y<0:
+    print("3rd qua")
+else:
+    print("4th qua")
+
+
+
+7. Python program to calculate the root of a Quadratic Equation. 
+Test Data : 1 5 7
+Expected Output :
+Root are imaginary;
+No solution.
+a=int(input("1st num"))
+b=int(input("2nd num"))
+c=int(input("3rd num"))
+r=b**2-4*a*c
+if r<0:
+    print("imaginary")
+else:
+    print("real")
+
+# 8. a Python program to read roll no, name and marks of three subjects and calculate the total, percentage and division. 
+# Test Data :
+# Input the Roll Number of the student :784
+# Input the Name of the Student :James
+# Input the marks of Physics, Chemistry and Computer Application : 70 80 90
+# Expected Output :
+# Roll No : 784
+# Name of Student : James
+# Marks in Physics : 70
+# Marks in Chemistry : 80
+# Marks in Computer Application : 90
+# Total Marks = 240
+# Percentage = 80.00
+# Division = First
+# n=input(" enter name")
+# r=int(input(" enter roll no"))
+# a=int(input("c app marks"))
+# p=int(input("physics marks"))
+# c=int(input("chem marks"))
+# total=a+p+c
+# per=total/3
+# print(n)
+# print(r)
+# print(a)
+# print(p)
+# print(c)
+# print(total)
+# print(per)
+# if per>=75:
+#     print("division = first")
+# elif per<75 and per>60:
+#     print("division=second")
+# else:
+#     print("division=3rd")
+
+
+
+9. Python program to read temperature in centigrade and display a suitable message according to temperature state below : 
+Temp < 0 then Freezing weather
+Temp 0-10 then Very Cold weather
+Temp 10-20 then Cold weather
+Temp 20-30 then Normal in Temp
+Temp 30-40 then Its Hot
+Temp >=40 then Its Very Hot
+Test Data :
+42
+Expected Output :
+Its very hot.
+
+n=int(input("enter temp"))
+if n<0:
+    print("freezing")
+elif n>=0 and n<10:
+    print("very cold")
+elif n>=10 and n<20:
+    print("cold")
+elif n>=20 and n<30:
+    print("normal")
+elif n>=30 and n<40:
+    print("hot")
+else:
+    print("very hot")
+
+
+
+10. a Python program to check whether a triangle is Equilateral, Isosceles or Scalene. 
+Test Data :
+50 50 60
+Expected Output :
+This is an isosceles triangle
+a=int(input("enter a:"))
+b=int(input("enter b:"))
+c=int(input("enter c:"))
+if a==b==c:
+    print("equilateral")
+elif a==b or a==c or b==c:
+    print("isoscales")
+else:
+    print("scalene")
+
+
+11. a Python program to check whether a triangle can be formed by the given value for the angles. 
+Test Data :
+40 55 65
+Expected Output :
+The triangle is not valid.
+a=int(input("enter a:"))
+b=int(input("enter b:"))
+c=int(input("enter c:"))
+if a+b+c==180 and a!=0 and b!=0 and c!=0:
+    print("valid triangle")
+else:
+    print("not valid")
+
+
+
+12. Write a Python program to check whether a character is an alphabet, digit or special character. 
+Test Data :
+@
+Expected Output :
+This is a special character.
+n= input("enter the char")
+if ((n>='a' and n<='z') or (n>='A' and n<='Z')):
+    print("alphabet")
+elif n>='0' and n<='9':
+    print("number")
+else:
+    print("special char")
+
+
+
+13. Write a Python program to check whether an alphabet is a vowel or consonant. 
+n=input("enter a char")
+if n>='a' and n<='z':
+    if n=='a' or n=='e' or n=='i' or n=='o' or n=='u':
+        print("vowel")
+    else:
+        print("consonant")
+else:
+    print("invalid")
+
+
+

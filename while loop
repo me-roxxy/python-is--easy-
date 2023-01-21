@@ -1,0 +1,101 @@
+loop based control flow
+
+##while loop
+for iterations
+i=1
+while i<=5:
+    print("hello")
+    i+=1
+
+//table of any num
+n=int(input("enter num"))
+i=1
+while i<=10:
+    print(n,"*",i,"=",n*i)
+    i+=1
+
+//factors of a num
+n=int(input("enter num"))
+i=1
+while i<=n:
+    if n%i==0:
+        print(i)
+        i+=1
+
+//sum of digits
+n=int(input("enter num"))
+i=0
+while n>0:
+    d=n%10
+    i=i+d
+    n//=10
+print(i)
+
+//sum of series(odd num before 20)
+i=1
+s=0
+while i<=20:
+    s=s+i
+    i+=2
+print(s)
+
+//for checking prime num
+n=int(input("enter num"))
+i=1
+count=0
+while i<=n:
+    if n%i==0:
+        count+=1
+    i+=1
+if count==2:
+    print("prime")
+else:
+    print("not")
+
+
+#breaking the loop
+i=1
+while i<=10:
+    if i==5:
+        break
+    print(i)
+    i+=1
+
+#skipping an iteration
+i=1
+while i<=10:
+    i+=1
+    if i==3 or i==5:
+        continue
+    print(i)
+
+#while with else block
+i=1
+while i<=10:
+    print("i",i)
+    i+=1
+else:
+    print("no")
+
+
+#nested while
+i=1
+while i<=10:
+    print(i)
+    j=1
+    while j<=10:
+        print(j)
+        j+=1
+    i+=1
+
+          or
+i=1
+while i<=10:
+    print(i)
+    j=1
+    while j<=10:
+        print(j,end=" ")
+        j+=1
+    print()
+    i+=1
+    

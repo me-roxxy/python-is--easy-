@@ -1,0 +1,247 @@
+1. check the prime no given from the user
+n=int(input("enter num"))
+i=1
+count=0
+while i<=n:
+    if n%i==0:
+        count+=1
+    i+=1
+if count==2:
+    print("prime") 
+else:
+    print("not")
+
+2. Accept n number from user and calculate the sum of all number between 1 and n including n
+n=int(input("enter nums"))
+sum=0
+for x in (1,n+1):
+    sum = sum+x
+    x+=1
+print(sum)
+              or
+n=int(input("enter num"))
+b=0
+sum=0
+while b<=n:
+    sum=sum+b
+    b+=1
+print(sum)
+
+3.  Display numbers which are divisible by 5 and if you find number greater than 150 stop the loop iteration
+a=1
+while a<=150:
+    if a%5==0:
+        print(a)
+    a+=1
+
+4. Given a number count the total number of digits in a number
+num=876543
+count=0
+while num>0:
+    temp=num%10
+    # print(temp)
+    count=count+1
+    # print(count)
+    num//=10
+print(count)
+
+5. Calculate the Sum of Natural Numbers
+n=int(input("enter n"))
+d=0
+sum=0
+while d<=n:
+    sum+=d
+    d+=1
+print(sum)
+
+6. Find Factorial of a Number
+n=int(input("enter num"))
+factorial=1
+while n>0:
+    factorial=factorial*n
+    n-=1
+print(factorial)
+
+7 Generate Multiplication Table
+n=int(input("enter num"))
+for i in range(1,11):
+    mul=n*i
+    i+1
+    print(n,'*',i,'=',mul)
+
+8. Write a Python program to get the Fibonacci series between 0 to 50. 
+   Note : The Fibonacci Sequence is the series of numbers :
+   0, 1, 1, 2, 3, 5, 8, 13, 21, ....
+  Every next number is found by adding up the two numbers before it.
+  Expected Output : 0 1 1 2 3 5 8 13 21 34
+
+num1=0
+num2=1
+while num2<50:
+    print(num2)
+    temp=num1
+    num1=num2
+    num2=temp+num1
+    print(end="....")
+
+9.  Find GCD of two Numbers
+a=int(input("enter a"))
+b=int(input("enter b"))
+if a>b:
+    temp=a
+else:
+    temp=b
+for x in range(1,temp+1):
+    if a%x==0 and b%x==0:
+        # print(x)
+        gcd=x
+print(gcd)
+
+10. Find LCM of two Numbers
+
+
+
+
+
+11. Display Characters from A to Z Using Loop
+for c in range(65,91):
+    print(chr(c))
+
+12. Reverse a Number
+a=int(input("enter num"))
+rev=0
+while a>0:
+    b=a%10
+    rev=rev*10+b
+    a//=10
+print(rev)
+
+13. Write a Python program to find those numbers which are divisible by 7 and multiple of 5, between 1500 and 2700 (both included).
+i=1500
+while i<=2700:
+    if i%7==0 and i%5==0:
+        print(i)
+    i+=1
+
+14. Write a Python program to guess a number between 1 to 9. 
+Note : User is prompted to enter a guess. If the user guesses wrong then the prompt appears again until the guess is correct, on successful guess, user will get a "Well guessed!" message, and the program will exit.
+n=int(input("guess a num"))
+i=6
+if n==i:
+    print("well guessed")
+ while n!=i:  
+    n=int(input("another guess"))
+      if n==i:
+        print("correct")
+        break
+
+15.  Write a Python program to construct the following pattern, using a nested for loop.
+
+* 
+* * 
+* * * 
+* * * * 
+* * * * * 
+* * * * 
+* * * 
+* * 
+*
+n=5
+for x in range(1,n+1):
+    for y in range(1,x+1):
+        print('*',end="")
+    print()
+n-=1
+for x in range(n):
+    for y in range(n-x):
+        print('*',end="")
+    print()
+
+16. Write a Python program that accepts a word from the user and reverse it. 
+s=input("enter a word")
+string=''
+for i in s:
+    string=i+string
+print(string)
+
+17. Write a Python program to count the number of even and odd numbers from a series of numbers. 
+Sample numbers : numbers = (1, 2, 3, 4, 5, 6, 7, 8, 9) 
+Expected Output :
+Number of even numbers : 5
+Number of odd numbers : 4
+i=0
+j=0
+for x in range(1,10):
+    if x%2==0:
+        i+=1
+    else:
+        j+=1
+print("even:",i)
+print("odd:",j)
+
+18. Write a Python program that prints all the numbers from 0 to 6 except 3 and 6.
+Note : Use 'continue' statement.
+Expected Output : 0 1 2 4 5
+for i in range(0,7):
+    if i==3 or i==6:
+        continue
+    print(i)
+
+19. Write a Python program that accepts a string and calculate the number of digits and letters.
+n=input("enter str")
+lcount=0
+dcount=0
+for x in n:
+    if x>='a' and x<='z' or x>='A' and x<='Z':
+        lcount+=1
+    elif ord(x)>=48 and ord(x)<=57:
+        dcount+=1
+print(lcount)
+print(dcount)
+
+20. Write a Python program to check the validity of password input by users. 
+Validation :
+
+At least 1 letter between [a-z] and 1 letter between [A-Z].
+At least 1 number between [0-9].
+At least 1 character from [$#@].
+Minimum length 6 characters.
+Maximum length 16 characters.
+
+n=input("enter pass")
+Scount=0
+Lcount=0
+Ucount=0
+Ncount=0
+if len(n)>=6 and len(n)<=16:
+    print('valid')
+else:
+    print("invalid")
+for x in n:
+    if x>='a' and x<='z':
+        Lcount+=1
+    elif x>='A' and x<='Z':
+        Ucount+=1
+    elif ord(x)>=48 and ord(x)<=57:
+        Ncount+=1
+    elif x == "@" or x == "#" or x == "$":
+        Scount+=1
+if Lcount>=1 or Ncount>=1 or Ucount>=1 or Scount>=1:
+    print("valid")
+else:
+    print("invalid")
+
+  
+21. Write a Python program to find numbers between 100 and 400 (both included) where each digit of a number is an even number. 
+The numbers obtained should be printed in a comma-separated sequence. 
+for m in range(100, 401):
+    m1 = m
+    while m > 0:
+        m2 = m % 10
+        
+        if m2 % 2 != 0:
+            break
+    
+        m //= 10
+    else:
+        print(m1, end=" ")

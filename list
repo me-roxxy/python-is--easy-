@@ -1,0 +1,50 @@
+li=[1,2,3,4+6j,4.7,"python",[3,4,"roxxy"]]
+print(li)
+print(li[-1][-1])
+
+
+# slicing
+print(li[2:-2])
+
+
+# iterations
+for x in li:
+    print(x)
+
+# print(max(li))
+# print(min(li))
+# print(sum(li))
+
+# methods
+li.append("roxxyop")
+print(li)
+
+li.insert(2,"roxxyop")
+print(li)
+
+# li.clear()
+# print(li)
+
+li1=li.copy()
+print(li1)
+
+print(li.count("roxxyop"))
+li.pop(5)
+print(li)
+
+li.remove("roxxyop")
+print(li)
+
+li.reverse()
+print(li)
+
+li=[1,5,8,9,6,7]
+li.sort()
+print(li)
+
+li.extend([9,67,4])
+print(li)
+
+li1=[8,6,4,6]
+li=li+li1
+print(li)

@@ -1,0 +1,177 @@
+'''
+tkinter-
+    Tkinter is a standard GUI(Graphical User Interface) library in Python. 
+    It provides a way to create graphical user interfaces using Python.
+    Tkinter is built on top of the Tcl/Tk GUI toolkit and provides 
+    a set of widgets (buttons, labels, text boxes, etc.) that can be 
+    used to build GUI applications.
+
+    With Tkinter, you can create windows, dialog boxes, buttons, 
+    checkboxes, radio buttons, scrollbars, and more. We can also use 
+    Tkinter to lay out your widgets, set their properties, and respond to 
+    user events (such as clicking a button or typing in a text box).
+
+    Tkinter is a great way to get started with GUI programming in Python, 
+    and it's included with most installations of Python, so we don't need 
+    to install any additional software to use it.
+
+    Widgets:-
+
+        Widgets in Tkinter are the building blocks of a GUI application.
+        They are components that you can use to create an interface for 
+        your application. Some of the most common Tkinter
+
+        label 
+            text
+            image
+        message
+        button
+        entry
+        text
+        radiobutton
+        checkbutton
+        option menu
+        listbox
+        frame
+        scale
+        scrollbar
+        messagebox
+        filedialog
+        menu
+
+    Placing functions:-
+
+        ~ place(x= ,y= ) :-
+            This method in tkinter is used to arrange widgets in
+        a specific position within the parent widget. Unlike the 
+        pack method, the place method allows us to explicitily 
+        specify the location of the widget using coordinates.
+
+    from tkinter import *
+    root = Tk()
+    label = Label(root, text="Hello, World!")
+    label.place(x=50, y=50)
+    button = Button(root, text="Click Me!", command=root.quit)
+    button.place(x=100, y=100)
+    root.mainloop()
+
+            In the above code, we create a label widget and a 
+        button widget. Both the widgets are placed in specific 
+        positions within the parent widget (root window) using 
+        the place method. The x and y options are used to specify 
+        the horizontal and vertical coordinates of the widget.
+
+
+
+        ~ pack(side= )
+            This method in tkinter is used to arrange widgets in 
+        a parent widget. It automatically calculates the size of 
+        the widgets and organizes them in a neat and clean manner.
+            We can use various options with the pack method to 
+        control the placement of widgets, such as side, fill, 
+        padx, and pady. For example, if we want to place the 
+        widgets side by side, you can use the side option and set 
+        it to left or right.
+
+
+
+        ~ grid(row= ,column= )
+            This method in tkinter is used to arrange widgets in 
+        a grid-like format within the parent widget. The grid 
+        method divides the parent widget into a set of rows and 
+        columns, and widgets are placed in specific cells within 
+        the grid. 
+        Here is an example of how the grid method can be used:
+
+
+    from tkinter import *
+    root = Tk()
+    label1 = Label(root, text="Hello,")
+    label1.grid(row=0, column=0)
+    label2 = Label(root, text="World!")
+    label2.grid(row=0, column=1)
+    button = Button(root, text="Click Me!", command=root.quit)
+    button.grid(row=1, column=0, columnspan=2, sticky=W+E)
+    root.mainloop()
+
+            In the above code, we create two label widgets and one
+        button widget. The grid method is used to arrange the 
+        widgets in a grid format within the parent widget (root 
+        window). The row and column options are used to specify 
+        the row and column that the widget should be placed in. 
+        The columnspan option is used to specify the number of 
+        columns that the widget should span, and the sticky 
+        option is used to specify how the widget should expand to 
+        fill the cell.
+
+
+
+'''
+from tkinter import *
+from PIL import Image,ImageTk
+
+root = Tk()
+root.geometry("600x500")
+root.config(bg= "grey", bd="7")
+
+'''
+    ~ Label 
+        A label widget is used to display text or image in a graphical user 
+    interface. It is one of the simplest widgets in tkinter and is used to 
+    display a single line of text or an image.
+    We can use the various options of the Label widget to control the 
+    apperance of the text or image, such as the font, color and alignment.
+
+'''
+
+lbl1 = Label(root, text="Hello Python", bg="grey")
+# lbl1.pack(side="top")
+# lbl1.grid(row=20, column=40)
+lbl1.place(x=100, y= 100)
+
+# we can not use pack and grid at the same time but we can use 
+# pack and place together
+
+lbl2 = Label(root, text= "Yes hello how may i help you?", bg="grey")
+lbl2.pack()
+
+lbl3 = Label(root, text="Hello frands chai pi lo, garam hai!", bg="grey", fg="yellow", font=("times", 24, "underline"))
+lbl3.pack()
+
+lbl4 = Label(root)
+lbl4.config(text= "mera naam sinchan hai, me shararat se bhara.", bg= "grey", fg= "red", font= ("times new roman", 22, "italic"))
+lbl4.pack()
+
+
+# Image label
+
+# img = PhotoImage(file= "C:\\Users\\Godiyal\\Pictures\\Wall-Paper\\1127972.png")
+
+# lbl5 = Label(root, image= img)
+# lbl5.pack(side= "bottom")
+
+photo = Image.open("C:\\Users\\Godiyal\\Pictures\\Wall-Paper\\Screenshot_20221107-152935_Gallery.jpg")
+
+photo = photo.resize((150, 300))
+img2 = ImageTk.PhotoImage(photo)
+
+lbl6 = Label(root, image= img2)
+lbl6.pack(side="bottom")
+
+
+'''
+    ~ Message:-
+        The Message widget in tkinter is used to display multiline text in a 
+    label-like widget. Unlike the Label widget, which can only display a 
+    single line of text, the Message widget can display multiple lines of 
+    text, and it can also automatically wrap the text if it exceeds the width 
+    of the widget.
+    The Message widget is useful when you need to display a longer piece of 
+    text, such as a description or an error message.
+
+'''
+
+m1 = Message(root, text= "Python Programming")
+m1.pack(side= "right")
+
+root.mainloop()
